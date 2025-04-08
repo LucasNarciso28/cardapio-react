@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 239, 210);
+  font-family: cursive;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* --- Header & Cart --- */
+header {
+  padding: 10px 20px;
+  background-color: rgb(72, 72, 185);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  font-size: 80%;
+}
+
+header img {
+  width: 60px;
+  height: auto;
+}
+
+header .cart-info {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 1.1em;
+  margin-left: auto; /* Push cart info to the right */
+  margin-right: 20px; /* Space before logo */
+}
+
+#cart-count {
+  font-weight: bold;
+}
+
+
+/* --- Nav --- */
+nav {
+  color: aliceblue;
+  background-color: rgb(38, 38, 160);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+nav li {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+main {
+  padding: 1.5em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Filter Controls --- */
+#filter-controls {
+  margin-bottom: 25px;
+  text-align: center; /* Center the filter buttons */
+  display: flex; /* Use flexbox for wrapping */
+  flex-wrap: wrap;
+  gap: 8px; /* Space between buttons */
+  justify-content: center; /* Center buttons if they wrap */
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  border: 1px solid rgb(72, 72, 185);
+  background-color: #fff;
+  color: rgb(72, 72, 185);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit; /* Use body font */
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.filter-btn:hover,
+.filter-btn:focus { /* Add focus style for accessibility */
+  background-color: rgba(72, 72, 185, 0.1);
+  outline: 2px solid rgb(72, 72, 185); /* Clearer focus indicator */
+  outline-offset: 2px;
+}
+
+.filter-btn.active {
+  background-color: rgb(72, 72, 185);
+  color: white;
+  font-weight: bold;
+}
+
+
+/* --- Cardapio Container & Items --- */
+#cardapio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+}
+
+/* --- Styling for each menu item card --- */
+article.prato {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column; /* Stack image above details on mobile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+}
+
+/* --- Hover/Focus Animation for Card --- */
+article.prato:hover,
+article.prato:focus-within { /* focus-within is great for keyboard navigation */
+  transform: translateY(-5px) scale(1.01); /* Lift and slightly enlarge */
+  box-shadow: 4px 8px 15px rgba(0,0,0,0.15);
+}
+
+
+article.prato img {
+  width: 100%; /* Full width on mobile */
+  max-width: 150px; /* Max width constrain */
+  height: 150px; /* Maintain aspect ratio better */
+  object-fit: cover;
+  border-radius: 8px;
+  align-self: center; /* Center image when stacked vertically */
+}
+
+article.prato .item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Take full width within the card */
+}
+
+article.prato h2 {
+  color: blue;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+article.prato h3.info {
+  color: #e67e22;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+article.prato p.descricao {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Takes up space to push price/button down */
+}
+
+article.prato .preco {
+  text-align: right;
+  color: #27ae60;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: auto;
+  padding-top: 5px;
+  margin-bottom: 10px; /* Space before button */
+}
+
+/* --- Add to Cart Button --- */
+.add-to-cart-btn {
+  background-color: #2ecc71; /* Green background */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-self: flex-end; /* Align button to the right */
+  margin-top: auto; /* Push to bottom */
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+  background-color: #27ae60; /* Darker green */
+  outline: none;
+}
+.add-to-cart-btn:active {
+  transform: scale(0.95); /* Click effect */
+}
+
+/* --- Footer --- */
+footer {
+  background-color: rgb(38, 38, 160);
+  color: aliceblue;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 2em;
+}
+
+/* --- Accessibility Helper --- */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Tablet and Larger - items side-by-side */
+@media screen and (min-width: 500px) { /* Adjust breakpoint */
+  article.prato {
+     flex-direction: row; /* Image and details side-by-side */
+     align-items: flex-start; /* Reset alignment */
+  }
+  article.prato img {
+      width: 120px; /* Fixed width for image */
+      height: 120px;
+      align-self: flex-start; /* Align image to top */
+  }
+  article.prato .item-details {
+      width: auto; /* Allow flexbox to size it */
+  }
+}
+
+/* Medium Screens - Two Columns */
+@media screen and (min-width: 650px) {
+   article.prato {
+       flex-basis: calc(50% - 10px); /* 2 columns (gap is 20px) */
+   }
+}
+
+/* Larger Screens - Three Columns */
+@media screen and (min-width: 950px) {
+   article.prato {
+       flex-basis: calc(33.333% - 14px); /* 3 columns (gap * 2/3) */
+   }
+   nav li {
+      font-size: 1.1em;
+   }
+}
+
+/* Even Larger Screens (Optional: adjust columns or nav) */
+@media screen and (min-width: 1200px) {
+   nav li {
+      font-size: 1.2em;
+   }
+   /* Optionally go to 4 columns if design allows */
+   /* article.prato { flex-basis: calc(25% - 15px); } */
+}

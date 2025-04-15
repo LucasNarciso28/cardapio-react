@@ -6,7 +6,7 @@ const Nav = () => {
       <ul>
         <li>Pratos</li>
         <li>Ingredientes</li>
-        <li>Compromisso da empresa</li>
+        <li>Compromisso</li>
       </ul>
     </nav>
   );

@@ -1,9 +1,26 @@
 // src/data.js
+import agua from '../src/asssets/agua.jpg'
+import bahama_mama from '../src/asssets/bahama_mama.jpg'
+import scorpion from '../src/asssets/scorpion.jpg'
+import blue_hawaian from '../src/asssets/blue_hawaian.jpg'
+import caipirinha from '../src/asssets/caipirinha.jpg'
+import cosmopolitan from '../src/asssets/cosmopolitan.jpg'
+import vinho from '../src/asssets/vinho_tinto.jpg'
+import pina_colada from '../src/asssets/pina_colada.jpg'
+import margarita from '../src/asssets/margarita.jpg'
+import refri from '../src/asssets/refri.jpg'
+import cerveja from '../src/asssets/cerveja.jpg'
+import agua_coco from '../src/asssets/aguadecoco.jpg'
+import suco_detox from '../src/asssets/detox.jpg'
+import mojito from '../src/asssets/mojito.jpg'
+//import  from '../src/asssets'
+
+
 export const menuData = [
   {
     id: "agua-01",
     nome: "Água gelada",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCcrQiAJUipgE7yo5z9mmJre0EcLv-cYaWw&s",
+    imagem: agua,
     descricao: "Água fresquinha com óleos refrescantes",
     preco: "Se comprar bebida, por conta da casa",
     info: "LIVRE DE LACTOSE.",
@@ -12,7 +29,7 @@ export const menuData = [
   {
     id: "bahama_mama",
     nome: "Bahama Mama",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLlcGVhgOohBmgXLzh1wUTXx6yKi49oIicg&s",
+    imagem: bahama_mama,
     descricao: "rum escuro, rum 151 proof, licor de café, licor de coco, suco de limão fresco",
     preco: "R$25.50",
     tags: ["alcoolica", "carne"]
@@ -20,8 +37,8 @@ export const menuData = [
   {
     id: "scorpion",
     nome: "Scorpion",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfllMzG-vhrCOyWgLyjdSqWh4Kvekn8iTXxQ&s",
-    descricao: "Rum, conhaque, suco de limão, xarope de amêndoa e brandy de pêssego.",
+    imagem: scorpion,
+    descricao: "Rum, Cognac Martell VSOP, suco de limão, xarope de amêndoa,brandy de pêssego",
     preco: "R$8.99",
     info: "LIVRE DE LACTOSE.",
     tags: ["alcoolica", "sem-lactose"]
@@ -29,7 +46,7 @@ export const menuData = [
   {
     id: "blue_hawaiian",
     nome: "Tropical Blue Hawaiian Cocktail",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnPgvDpJFTwAN4xW8Ip5OOWiOz7cZ9C24WjQ&s",
+    imagem: blue_hawaian,
     descricao: "Rum de Coco, Licor Blue Curaçao, Suco de Abacaxi, Gelo",
     preco: "R$10.50",
     info: "CONTÊM COCO.",
@@ -38,7 +55,7 @@ export const menuData = [
   {
     id: "mojito",
     nome: "Mojito",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOjsNsiZ6OM3omeDgPPKDJqzUUiW-7PBMt2A&s",
+    imagem: mojito,
     descricao: "Rum branco, hortelã, limão, açúcar e água com gás.",
     preco: "R$12.50",
     info: "LIVRE DE GLÚTEN.",
@@ -47,7 +64,7 @@ export const menuData = [
   {
     id: "caipirinha",
     nome: "Caipirinha",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCrCcayWAKBzWc3Fb8PpORGkkWXzzV0vEwxw&s",
+    imagem: caipirinha,
     descricao: "Cachaça, limão, açúcar e gelo.",
     preco: "R$10.00",
     info: "LIVRE DE LACTOSE.",
@@ -56,7 +73,7 @@ export const menuData = [
   {
     id: "pina-colada",
     nome: "Piña Colada",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt4HYOJ0eUxcLLfghT7RVZB8DWQ5rYji9S_g&s",
+    imagem: pina_colada,
     descricao: "Rum, leite de coco, suco de abacaxi e gelo.",
     preco: "R$14.99",
     info: "CONTÉM LACTOSE.",
@@ -65,7 +82,7 @@ export const menuData = [
   {
     id: "margarita",
     nome: "Margarita",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdBZAVwyFCYHAMABkp5KsTGXyAyXNxBIVubg&s",
+    imagem: margarita,
     descricao: "Tequila, triple sec, suco de limão e sal na borda.",
     preco: "R$13.50",
     info: "LIVRE DE LACTOSE.",
@@ -74,7 +91,7 @@ export const menuData = [
   {
     id: "cosmopolitan",
     nome: "Cosmopolitan",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqmGFjCSgAB9cIDb5zjgOMsz4_yGBXsxxoLA&s",
+    imagem: cosmopolitan,
     descricao: "Vodka, triple sec, suco de cranberry e suco de limão.",
     preco: "R$15.00",
     info: "LIVRE DE LACTOSE.",
@@ -83,7 +100,7 @@ export const menuData = [
   {
     id: "suco-verde",
     nome: "Suco Verde Detox",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-08wB0yaD-mougMAI7Ec_8-6UICuvGdcANA&s",
+    imagem: suco_detox,
     descricao: "Couve, abacaxi, gengibre, hortelã e água de coco.",
     preco: "R$7.50",
     info: "VEGANO E SEM LACTOSE.",
@@ -92,7 +109,7 @@ export const menuData = [
   {
     id: "refrigerante-cola",
     nome: "Refrigerante de Cola",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTacuUIKVVAMfCgNxJ7Nr2jaWCu8IBDglo0uQ&s",
+    imagem: refri,
     descricao: "Refrigerante sabor cola, gelado e com gás.",
     preco: "R$5.00",
     info: "LIVRE DE LACTOSE.",
@@ -101,7 +118,7 @@ export const menuData = [
   {
     id: "agua-coco",
     nome: "Água de Coco Natural",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTPKchhDTSao8JXNIaKikZfbL6Ocl1q9mKA&s",
+    imagem: agua_coco,
     descricao: "Água de coco fresca, servida gelada.",
     preco: "R$6.00",
     info: "NATURAL E SEM ADIÇÃO DE AÇÚCAR.",
@@ -110,7 +127,7 @@ export const menuData = [
   {
     id: "cerveja",
     nome: "Cerveja",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpCaT-mFt0v0gnd18DXZG8s1aDjbptbJwbkg&s",
+    imagem: cerveja,
     descricao: "Cerveja leve e refrescante, estilo pilsen.",
     preco: "R$9.00",
     info: "CONTÉM GLÚTEN.",
@@ -119,7 +136,7 @@ export const menuData = [
   {
     id: "vinho-tinto",
     nome: "Vinho Tinto Seco",
-    imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XSApkDo4tRKlYOUdggrK9zqNd9hIGkmlzA&s",
+    imagem: vinho,
     descricao: "Vinho tinto seco, harmoniza com carnes e queijos.",
     preco: "R$35.00",
     info: "LIVRE DE LACTOSE.",

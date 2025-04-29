@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../asssets/icone-de-bebida.webp"
 
 const Header = ({ cartCount }) => {
   return (
@@ -8,8 +9,8 @@ const Header = ({ cartCount }) => {
         🛒 <span id="cart-count">{cartCount}</span> Itens
       </div>
       <img 
-        src="https://cdn-icons-png.flaticon.com/512/2209/2209792.png" 
-        alt="logo da empresa, uma gota de água" 
+        src= {logo}
+        alt="logo da empresa, uma taça de vinho com uma bebida alcoólica" 
       />
     </header>
   );

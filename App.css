@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f8ff; /* Azul claro de praia */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --- Header & Cart --- */
+header {
+  padding: 15px 20px;
+  background-color: #1e3d59; /* Azul escuro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f5f0e1; /* Bege claro */
+  font-size: 1.1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+}
+
+header .cart-info {
+  background-color: rgba(245, 240, 225, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1.1em;
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#cart-count {
+  font-weight: bold;
+  color: #ff6e40; /* Laranja */
+}
+
+/* --- Nav --- */
+nav {
+  background-color: #ff6e40; /* Laranja vibrante */
+  color: #1e3d59;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+nav li {
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav li:hover {
+  background-color: rgba(30, 61, 89, 0.1);
+}
+
+/* --- Filter Controls --- */
+#filter-controls {
+  margin: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #1e3d59;
+  color: #f5f0e1;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #ff6e40;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: #ff6e40;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Cardapio Container & Items --- */
+#cardapio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+article.prato {
+  background-color: #f5f0e1;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: all 0.3s;
+  border: 1px solid #ddd;
+}
+
+article.prato:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+article.prato img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+article.prato h2 {
+  color: #1e3d59;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+article.prato .info {
+  color: #ff6e40;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+article.prato .descricao {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+article.prato .preco {
+  color: #1e3d59;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* --- Add to Cart Button --- */
+.add-to-cart-btn {
+  background-color: #1e3d59;
+  color: #f5f0e1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff6e40;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #4CAF50;
+  cursor: not-allowed;
+}
+
+/* --- Alcohol Intensity Indicator --- */
+.alcohol-intensity {
+  height: 5px;
+  border-radius: 5px;
+  margin: 5px 0 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3d59;
+  color: #f5f0e1;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #cardapio-container {
+    grid-template-columns: 1fr;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  header .cart-info {
+    margin: 10px 0 0;
+  }
+}

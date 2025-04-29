@@ -5,263 +5,210 @@
 }
 
 body {
-  background-color: rgb(241, 239, 210);
-  font-family: cursive;
-  line-height: 1.6; /* Improved readability */
+  background-color: #f0f8ff; /* Azul claro de praia */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* --- Header & Cart --- */
 header {
-  padding: 10px 20px;
-  background-color: rgb(72, 72, 185);
+  padding: 15px 20px;
+  background-color: #1e3d59; /* Azul escuro */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: aliceblue;
-  font-size: 80%;
+  color: #f5f0e1; /* Bege claro */
+  font-size: 1.1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header img {
-  width: 60px;
-  height: auto;
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
 }
 
 header .cart-info {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px;
-  border-radius: 15px;
+  background-color: rgba(245, 240, 225, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
   font-size: 1.1em;
-  margin-left: auto; /* Push cart info to the right */
-  margin-right: 20px; /* Space before logo */
+  margin-left: auto;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #cart-count {
   font-weight: bold;
+  color: #ff6e40; /* Laranja */
 }
-
 
 /* --- Nav --- */
 nav {
-  color: aliceblue;
-  background-color: rgb(38, 38, 160);
+  background-color: #ff6e40; /* Laranja vibrante */
+  color: #1e3d59;
+  padding: 10px 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
+  padding: 0 20px;
 }
 
 nav li {
-  font-size: 1em;
+  font-size: 1.1em;
   cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-main {
-  padding: 1.5em;
-  max-width: 1200px;
-  margin: 0 auto;
+nav li:hover {
+  background-color: rgba(30, 61, 89, 0.1);
 }
 
 /* --- Filter Controls --- */
 #filter-controls {
-  margin-bottom: 25px;
-  text-align: center; /* Center the filter buttons */
-  display: flex; /* Use flexbox for wrapping */
+  margin: 25px 0;
+  display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Space between buttons */
-  justify-content: center; /* Center buttons if they wrap */
+  gap: 10px;
+  justify-content: center;
 }
 
 .filter-btn {
-  padding: 8px 15px;
-  border: 1px solid rgb(72, 72, 185);
-  background-color: #fff;
-  color: rgb(72, 72, 185);
+  padding: 8px 16px;
+  border: none;
+  background-color: #1e3d59;
+  color: #f5f0e1;
   border-radius: 20px;
   cursor: pointer;
-  font-family: inherit; /* Use body font */
   font-size: 0.9em;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition: all 0.3s;
 }
 
-.filter-btn:hover,
-.filter-btn:focus { /* Add focus style for accessibility */
-  background-color: rgba(72, 72, 185, 0.1);
-  outline: 2px solid rgb(72, 72, 185); /* Clearer focus indicator */
-  outline-offset: 2px;
+.filter-btn:hover {
+  background-color: #ff6e40;
+  transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background-color: rgb(72, 72, 185);
-  color: white;
+  background-color: #ff6e40;
   font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 /* --- Cardapio Container & Items --- */
 #cardapio-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between items */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
 }
 
-/* --- Styling for each menu item card --- */
 article.prato {
-  background-color: #fff;
+  background-color: #f5f0e1;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  display: flex;
-  gap: 15px;
-  width: 100%;
-  align-items: flex-start;
-  flex-direction: column; /* Stack image above details on mobile */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+  transition: all 0.3s;
+  border: 1px solid #ddd;
 }
 
-/* --- Hover/Focus Animation for Card --- */
-article.prato:hover,
-article.prato:focus-within { /* focus-within is great for keyboard navigation */
-  transform: translateY(-5px) scale(1.01); /* Lift and slightly enlarge */
-  box-shadow: 4px 8px 15px rgba(0,0,0,0.15);
+article.prato:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 article.prato img {
-  width: 100%; /* Full width on mobile */
-  max-width: 150px; /* Max width constrain */
-  height: 150px; /* Maintain aspect ratio better */
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  align-self: center; /* Center image when stacked vertically */
-}
-
-article.prato .item-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Take full width within the card */
+  margin-bottom: 10px;
 }
 
 article.prato h2 {
-  color: blue;
-  font-size: 1.3em;
+  color: #1e3d59;
+  font-size: 1.4em;
   margin-bottom: 5px;
 }
 
-article.prato h3.info {
-  color: #e67e22;
+article.prato .info {
+  color: #ff6e40;
   font-size: 0.9em;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-article.prato p.descricao {
-  color: #555;
+article.prato .descricao {
+  color: #666;
   font-size: 0.95em;
   margin-bottom: 15px;
-  flex-grow: 1; /* Takes up space to push price/button down */
 }
 
 article.prato .preco {
-  text-align: right;
-  color: #27ae60;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.2em;
+  color: #1e3d59;
+  font-size: 1.3em;
   font-weight: bold;
-  margin-top: auto;
-  padding-top: 5px;
-  margin-bottom: 10px; /* Space before button */
+  text-align: right;
 }
 
 /* --- Add to Cart Button --- */
 .add-to-cart-btn {
-  background-color: #2ecc71; /* Green background */
-  color: white;
+  background-color: #1e3d59;
+  color: #f5f0e1;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: inherit;
-  font-size: 0.95em;
   font-weight: bold;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-  align-self: flex-end; /* Align button to the right */
-  margin-top: auto; /* Push to bottom */
+  width: 100%;
+  transition: all 0.3s;
 }
 
-.add-to-cart-btn:hover,
-.add-to-cart-btn:focus {
-  background-color: #27ae60; /* Darker green */
-  outline: none;
-}
-.add-to-cart-btn:active {
-  transform: scale(0.95); /* Click effect */
+.add-to-cart-btn:hover {
+  background-color: #ff6e40;
 }
 
-/* --- Footer --- */
+.add-to-cart-btn:disabled {
+  background-color: #4CAF50;
+  cursor: not-allowed;
+}
+
+/* --- Alcohol Intensity Indicator --- */
+.alcohol-intensity {
+  height: 5px;
+  border-radius: 5px;
+  margin: 5px 0 10px;
+}
+
+/* Footer */
 footer {
-  background-color: rgb(38, 38, 160);
-  color: aliceblue;
+  background-color: #1e3d59;
+  color: #f5f0e1;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 12px;
-  padding: 10px;
-  margin-top: 2em;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 1em;
 }
 
-/* --- Accessibility Helper --- */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap; /* Prevent line breaks */
-}
-
-
-/* --- Media Queries for Responsiveness --- */
-
-/* Tablet and Larger - items side-by-side */
-@media screen and (min-width: 500px) { /* Adjust breakpoint */
-  article.prato {
-     flex-direction: row; /* Image and details side-by-side */
-     align-items: flex-start; /* Reset alignment */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #cardapio-container {
+    grid-template-columns: 1fr;
   }
-  article.prato img {
-      width: 120px; /* Fixed width for image */
-      height: 120px;
-      align-self: flex-start; /* Align image to top */
+  
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
-  article.prato .item-details {
-      width: auto; /* Allow flexbox to size it */
+  
+  header .cart-info {
+    margin: 10px 0 0;
   }
-}
-
-/* Medium Screens - Two Columns */
-@media screen and (min-width: 650px) {
-   article.prato {
-       flex-basis: calc(50% - 10px); /* 2 columns (gap is 20px) */
-   }
-}
-
-/* Larger Screens - Three Columns */
-@media screen and (min-width: 950px) {
-   article.prato {
-       flex-basis: calc(33.333% - 14px); /* 3 columns (gap * 2/3) */
-   }
-   nav li {
-      font-size: 1.1em;
-   }
-}
-
-/* Even Larger Screens (Optional: adjust columns or nav) */
-@media screen and (min-width: 1200px) {
-   nav li {
-      font-size: 1.2em;
-   }
-   /* Optionally go to 4 columns if design allows */
-   /* article.prato { flex-basis: calc(25% - 15px); } */
 }

@@ -4,10 +4,10 @@ const FilterControls = ({ activeFilter, onFilterChange }) => {
   const filterOptions = [
     { value: 'all', label: 'Todos' },
     { value: 'bebida', label: 'Bebidas' },
-    { value: 'acompanhamento', label: 'Acompanhamentos' },
-    { value: 'principal', label: 'Principais' },
-    { value: 'vegetariano', label: 'Vegetarianos' },
-    { value: 'sem-lactose', label: 'Sem Lactose' }
+    { value: 'nao-alcoolica', label: 'Não Alcoólicas' },
+    { value: 'alcoolica', label: 'Alcoólicas' },
+    { value: 'sem-lactose', label: 'Sem Lactose' },
+    { value: 'sem-gluten', label: 'Sem Glúten' }
   ];
 
   return (

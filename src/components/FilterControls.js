@@ -3,7 +3,6 @@ import React from 'react';
 const FilterControls = ({ activeFilter, onFilterChange }) => {
   const filterOptions = [
     { value: 'all', label: 'Todos' },
-    { value: 'bebida', label: 'Bebidas' },
     { value: 'nao-alcoolica', label: 'Não Alcoólicas' },
     { value: 'alcoolica', label: 'Alcoólicas' },
     { value: 'sem-lactose', label: 'Sem Lactose' },

@@ -7,7 +7,7 @@ export const menuData = [
     descricao: "Água fresquinha com óleos refrescantes",
     preco: "Se comprar bebida, por conta da casa",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida"]
+    tags: ["nao-alcoolica"]
   },
   {
     id: "bahama_mama",
@@ -15,7 +15,7 @@ export const menuData = [
     imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLlcGVhgOohBmgXLzh1wUTXx6yKi49oIicg&s",
     descricao: "rum escuro, rum 151 proof, licor de café, licor de coco, suco de limão fresco",
     preco: "R$25.50",
-    tags: ["principal", "carne"]
+    tags: ["alcoolica", "carne"]
   },
   {
     id: "scorpion",
@@ -24,7 +24,7 @@ export const menuData = [
     descricao: "Rum, conhaque, suco de limão, xarope de amêndoa e brandy de pêssego.",
     preco: "R$8.99",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "sem-lactose"]
+    tags: ["alcoolica", "sem-lactose"]
   },
   {
     id: "blue_hawaiian",
@@ -33,7 +33,7 @@ export const menuData = [
     descricao: "Rum de Coco, Licor Blue Curaçao, Suco de Abacaxi, Gelo",
     preco: "R$10.50",
     info: "CONTÊM COCO.",
-    tags: ["bebida", "sem-lactose"]
+    tags: ["alcoolica", "sem-lactose"]
   },
   {
     id: "mojito",
@@ -42,7 +42,7 @@ export const menuData = [
     descricao: "Rum branco, hortelã, limão, açúcar e água com gás.",
     preco: "R$12.50",
     info: "LIVRE DE GLÚTEN.",
-    tags: ["bebida", "sem-gluten", "alcoólica"]
+    tags: ["alcoolica", "sem-gluten", "alcoólica"]
   },
   {
     id: "caipirinha",
@@ -51,7 +51,7 @@ export const menuData = [
     descricao: "Cachaça, limão, açúcar e gelo.",
     preco: "R$10.00",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "sem-lactose", "alcoólica"]
+    tags: ["alcoolica", "sem-lactose", "alcoólica"]
   },
   {
     id: "pina-colada",
@@ -60,7 +60,7 @@ export const menuData = [
     descricao: "Rum, leite de coco, suco de abacaxi e gelo.",
     preco: "R$14.99",
     info: "CONTÉM LACTOSE.",
-    tags: ["bebida", "alcoólica", "tropical"]
+    tags: ["alcoolica", "alcoólica", "tropical"]
   },
   {
     id: "margarita",
@@ -69,7 +69,7 @@ export const menuData = [
     descricao: "Tequila, triple sec, suco de limão e sal na borda.",
     preco: "R$13.50",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "sem-lactose", "alcoólica"]
+    tags: ["alcoolica", "sem-lactose", "alcoólica"]
   },
   {
     id: "cosmopolitan",
@@ -78,7 +78,7 @@ export const menuData = [
     descricao: "Vodka, triple sec, suco de cranberry e suco de limão.",
     preco: "R$15.00",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "sem-lactose", "alcoólica"]
+    tags: ["alcoolica", "sem-lactose", "alcoólica"]
   },
   {
     id: "suco-verde",
@@ -87,7 +87,7 @@ export const menuData = [
     descricao: "Couve, abacaxi, gengibre, hortelã e água de coco.",
     preco: "R$7.50",
     info: "VEGANO E SEM LACTOSE.",
-    tags: ["bebida", "saudável", "não-alcoólica"]
+    tags: ["nao-alcoolica", "saudável", "não-alcoólica"]
   },
   {
     id: "refrigerante-cola",
@@ -96,7 +96,7 @@ export const menuData = [
     descricao: "Refrigerante sabor cola, gelado e com gás.",
     preco: "R$5.00",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "refrigerante", "não-alcoólica"]
+    tags: ["nao-alcoolica", "refrigerante", "não-alcoólica"]
   },
   {
     id: "agua-coco",
@@ -105,7 +105,7 @@ export const menuData = [
     descricao: "Água de coco fresca, servida gelada.",
     preco: "R$6.00",
     info: "NATURAL E SEM ADIÇÃO DE AÇÚCAR.",
-    tags: ["bebida", "natural", "não-alcoólica"]
+    tags: ["benao-alcoolicabida", "natural", "não-alcoólica"]
   },
   {
     id: "cerveja",
@@ -114,7 +114,7 @@ export const menuData = [
     descricao: "Cerveja leve e refrescante, estilo pilsen.",
     preco: "R$9.00",
     info: "CONTÉM GLÚTEN.",
-    tags: ["bebida", "cerveja", "alcoólica"]
+    tags: ["alcoolica", "cerveja", "alcoólica"]
   },
   {
     id: "vinho-tinto",
@@ -123,7 +123,7 @@ export const menuData = [
     descricao: "Vinho tinto seco, harmoniza com carnes e queijos.",
     preco: "R$35.00",
     info: "LIVRE DE LACTOSE.",
-    tags: ["bebida", "vinho", "alcoólica"]
+    tags: ["alcoolica", "vinho", "alcoólica"]
   }
 ];
 

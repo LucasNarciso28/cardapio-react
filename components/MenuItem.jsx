@@ -13,7 +13,7 @@ const MenuItem = ({ item, onAddToCart }) => {
     <article className="prato" tabIndex="0">
       <img
         src={item.imagem}
-        alt={item.nome}
+        alt={item.altImagem || item.nome}
         loading="lazy"
       />
       <div className="item-details">
